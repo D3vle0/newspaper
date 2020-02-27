@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신문 사설 모음</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./dark.css" />
+</head>
+<style>
+  @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 3vw;
+  }
+
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: #e8eaf0;
+  }
+
+  .container {
+    height: 20%;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e0e2e7, #eeeff1);
+    box-shadow: 20px 20px 15px #e0e0e0, -15px -15px 20px #ffffff;
+    margin-right: 1vw;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .box {
+    text-decoration: none;
+    width: 23%;
+    height: 7vh;
+    margin-bottom: 10ex;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e7e7e7, #ececec);
+    box-shadow: 20px 20px 15px #cfcfcf, -5px -10px 20px #ffffff;
+    margin-left: 6vw;
+  }
+
+  .box:hover {
+    background: linear-gradient(145deg, #afdbff, #fdb8f7);
+  }
+
+  .box:active {
+    box-shadow: inset 20px 20px 15px #cfcfcf, inset -5px -10px 20px #ffffff;
+  }
+
+  .newsname {
+    color: #1848b1;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 855px) {
+
+    .container,
+    .dark-mode>.container {
+      width: 95%;
+    }
+
+    .box,
+    .dark-mode>body>.container>a>.box {
+      width: 35%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .container,
+    .dark-mode>.container {
+      width: 97%;
+    }
+
+    .box,
+    .dark-mode>.container>a>.box {
+      width: 90%;
+    }
+  }
+
+  body>.text {
+    text-align: center;
+  }
+
+  .dark-mode {
+    background-color: #202025;
+  }
+
+  .dark-mode>.container {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #202025, #202025);
+    box-shadow: 25px 25px 20px #0c0c0c, -20px -20px 60px #303030;
+  }
+
+  .dark-mode>.container>h1 {
+    color: rgb(177, 177, 177);
+  }
+
+  .dark-mode>.text {
+    color: rgb(177, 177, 177);
+  }
+
+  .dark-mode>.container>a>.box,
+  .dark-mode>.box {
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+    height: 7vh;
+    margin-bottom: 10ex;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #202025, #202025);
+    box-shadow: 20px 20px 20px #0c0c0c, -20px -20px 60px #353535;
+    margin-left: 6vw;
+  }
+
+  .dark-mode>.container>a>.box:hover,
+  .dark-mode>.box:hover {
+    background: linear-gradient(145deg, #3e4e5a, #7e5c7b);
+  }
+
+  .dark-mode>.container>a>.box:active,
+  .dark-mode>.box:active {
+    box-shadow: inset 20px 20px 20px #0c0c0c, inset -20px -20px 60px #353535;
+  }
+
+  .dark-mode>.container>a>.box>.newsname {
+    color: #668ed8;
+    font-size: 20px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h1>신문 사설 모음</h1>
+    <a href="https://media.naver.com/press/009?sid=110" target="_blank"><button class="box">
+        <span class="newsname">매일경제</span><br /><span id="title1"><%=title1 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/088?sid=110" target="_blank"><button class="box">
+        <span class="newsname">매일신문</span><br /><span id="title2"><%=title2 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/001?sid=110" target="_blank"><button class="box">
+        <span class="newsname">연합뉴스</span><br /><span id="title3"><%=title3 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/032?sid=110" target="_blank"><button class="box">
+        <span class="newsname">경향신문</span><br /><span id="title4"><%=title4 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/015?sid=110" target="_blank"><button class="box">
+        <span class="newsname">한국경제</span><br /><span id="title5"><%=title5 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/138" target="_blank"><button class="box">
+        <span class="newsname">디지털데일리</span><br /><span id="title6"><%=title6 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/277?sid=110" target="_blank"><button class="box">
+        <span class="newsname">아시아경제</span><br /><span id="title7"><%=title7 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/008?sid=110" target="_blank"><button class="box">
+        <span class="newsname">머니투데이</span><br /><span id="title8"><%=title8 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/056?sid=110" target="_blank"><button class="box">
+        <span class="newsname">KBS 뉴스</span><br /><span id="title9"><%=title9 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/021?sid=110" target="_blank"><button class="box">
+        <span class="newsname">문화일보</span><br /><span id="title11"><%=title11 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/022?sid=110" target="_blank"><button class="box">
+        <span class="newsname">세계일보</span><br /><span id="title12"><%=title12 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/029" target="_blank"><button class="box">
+        <span class="newsname">디지털타임스</span><br /><span id="title13"><%=title13 %></span>
+      </button></a>
+    <a href="https://media.naver.com/press/366?sid=110" target="_blank"><button class="box">
+        <span class="newsname">조선비즈</span><br /><span id="title14"><%=title14 %></span>
+      </button></a>
+  </div>
+  <p class="text">
+    made by <a href="https://github.com/d3vle0" target="_blank">@Devleo</a>
+  </p>
+  <br />
+  <button onclick="theme()" class="box" style="text-align: center;">
+    Toggle dark mode
+  </button>
+</body>
+
+<script>
+  function theme() {
+    document.body.classList.toggle("dark-mode");
+  }
+  var current = new Date();
+  var hour = current.getHours();
+  console.log(hour);
+  if (hour <= 6 && hour >= 19) {
+    document.body.classList.toggle("dark-mode");
+  } 
+</script>
+
+</html>

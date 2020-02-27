@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+h1 {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #e8eaf0;
+}
+
+.container {
+    height: 20%;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e0e2e7, #eeeff1);
+    box-shadow:  20px 20px 15px #e0e0e0, 
+                -15px -15px 20px #ffffff; 
+    margin-right: 1vw;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.box {
+    text-decoration: none;
+    width: 20%;
+    height: 7vh;
+    margin-bottom: 10ex;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #e7e7e7, #ececec);
+    box-shadow:  20px 20px 15px #cfcfcf, 
+                -5px -10px 20px #ffffff;
+    margin-left: 6vw;                
+}
+
+.box:hover {
+    background: linear-gradient(145deg, #afdbff, #fdb8f7);
+}
+
+.box:active {
+    box-shadow: inset 20px 20px 15px #cfcfcf, 
+                inset -5px -10px 20px #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+      width: 95%;
+    }
+    button {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .container {
+      width: 97%;
+    }
+    .box {
+        width: 35%;
+    }
+    button {
+        width: 50%;
+    }
+}
+
+body > .text {
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #202025;
+}
+
+.dark-mode > .container {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #202025, #202025);
+    box-shadow:  25px 25px 20px #0c0c0c, 
+             -20px -20px 60px #303030;
+}
+
+.dark-mode > .container > h1 {
+    color: rgb(177, 177, 177);
+}
+
+.dark-mode > .text {
+    color: rgb(177, 177, 177);
+}
+
+.dark-mode > .container > a > .box, .dark-mode > .box {
+    color: rgb(177, 177, 177);
+    text-decoration: none;
+    width: 20%;
+    height: 7vh;
+    margin-bottom: 10ex;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #202025, #202025);
+    box-shadow:  20px 20px 20px #0c0c0c,
+             -20px -20px 60px #353535;
+    margin-left: 6vw;                
+}
+
+.dark-mode > .container > a > .box:hover, .dark-mode > .box:hover {
+    background: linear-gradient(145deg, #3e4e5a, #7e5c7b);
+}
+
+.dark-mode > .container > a > .box:active, .dark-mode > .box:active{
+    box-shadow: inset 20px 20px 20px #0c0c0c,
+             inset -20px -20px 60px #353535;
+}
+
