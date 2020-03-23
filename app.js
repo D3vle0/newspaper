@@ -65,7 +65,7 @@ app.get("/", function(req, res) {
     }
   );
   request(
-    "https://media.naver.com/press/015?sid=110",
+    "https://media.naver.com/press/138?sid=105",
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -73,18 +73,12 @@ app.get("/", function(req, res) {
       }
     }
   );
-  request("https://media.naver.com/press/138", (error, response, html) => {
-    if (!error && response.statusCode == 200) {
-      const $ = cheerio.load(html);
-      url[6] = $(".press_edit_news_title")[0].children[0].data;
-    }
-  });
   request(
     "https://media.naver.com/press/277?sid=110",
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        url[7] = $(".press_edit_news_title")[0].children[0].data;
+        url[6] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
@@ -93,7 +87,7 @@ app.get("/", function(req, res) {
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        url[8] = $(".press_edit_news_title")[0].children[0].data;
+        url[7] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
@@ -102,7 +96,7 @@ app.get("/", function(req, res) {
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        url[9] = $(".press_edit_news_title")[0].children[0].data;
+        url[8] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
@@ -111,7 +105,7 @@ app.get("/", function(req, res) {
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        url[10] = $(".press_edit_news_title")[0].children[0].data;
+        url[9] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
@@ -120,25 +114,29 @@ app.get("/", function(req, res) {
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
+        url[10] = $(".press_edit_news_title")[0].children[0].data;
+      }
+    }
+  );
+  request(
+    "https://media.naver.com/press/029?sid=110",
+    (error, response, html) => {
+      if (!error && response.statusCode == 200) {
+        const $ = cheerio.load(html);
         url[11] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
-  request("https://media.naver.com/press/029", (error, response, html) => {
-    if (!error && response.statusCode == 200) {
-      const $ = cheerio.load(html);
-      url[12] = $(".press_edit_news_title")[0].children[0].data;
-    }
-  });
   request(
     "https://media.naver.com/press/366?sid=110",
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
-        url[13] = $(".press_edit_news_title")[0].children[0].data;
+        url[12] = $(".press_edit_news_title")[0].children[0].data;
       }
     }
   );
+  
   res.render("template.ejs", {
     title1: url[0],
     title2: url[1],
