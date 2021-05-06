@@ -20,7 +20,7 @@
     "iconv-lite": "^0.5.1",
     "path": "^0.12.7",
     "request": "^2.88.2",
-    "sanitize-html": "^1.22.0"
+    "sanitize-html": "^2.3.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
